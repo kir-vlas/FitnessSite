@@ -6,7 +6,7 @@
     <title>@ViewBag.Title</title>
     <link href="@Url.Content("~/Content/Style.css")" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script src="@Url.Content("Scripts/jquery.bxslider.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/jquery.bxslider.min.js")"></script>
     <script type="text/javascript">
 $(document).ready(function(){
   $('.bxslider').bxSlider({
@@ -21,7 +21,7 @@ $(document).ready(function(){
 <body>
     <div id="header">
         <div id="header1">
-            <img src="logo.png" alt="logo" width="106" height="89">
+            <img src="@Url.Content("~/Content/Images/logo.png")" alt="logo" width="106" height="89">
             <div style="float:right;">
                 <h4 style="margin-right: 430px;margin-top: 0px;">фитнес-центр</h4>
                 <h1 style="margin-right: 430px;margin-top: -25px;">ARNOLD</h1>
@@ -44,8 +44,8 @@ $(document).ready(function(){
                 <a class="myButton" onclick="show('block')"></a>
             </div>
         </div>
-    </div class="main">
-    <div>
+    </div>
+    <div class="main">
         @RenderBody()
     </div>
 </body>

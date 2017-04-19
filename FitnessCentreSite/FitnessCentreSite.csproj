@@ -113,6 +113,19 @@
     <Content Include="Content\Images\banners\3.png" />
     <Content Include="Content\Images\banners\4.png" />
     <Content Include="Content\Images\banners\5.png" />
+    <Content Include="Content\Images\Services\Body\1.jpg" />
+    <Content Include="Content\Images\Services\Body\2.jpg" />
+    <Content Include="Content\Images\Services\Body\3.jpg" />
+    <Content Include="Content\Images\Services\Cardio\1.jpg" />
+    <Content Include="Content\Images\Services\Cardio\2.jpg" />
+    <Content Include="Content\Images\Services\Cardio\3.jpg" />
+    <Content Include="Content\Images\Services\Karate\1.jpg" />
+    <Content Include="Content\Images\Services\Karate\2.jpg" />
+    <Content Include="Content\Images\Services\Karate\3.JPG" />
+    <Content Include="Content\Images\Services\rekuslug.jpg" />
+    <Content Include="Content\Images\Services\Trenzal\1.jpg" />
+    <Content Include="Content\Images\Services\Trenzal\2.jpg" />
+    <Content Include="Content\Images\Services\Trenzal\3.png" />
     <Content Include="Content\Images\slider\bx_loader.gif" />
     <Content Include="Content\Images\slider\controls.png" />
     <Content Include="Content\Site.css" />
@@ -132,6 +145,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -148,6 +162,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Services\Services.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -157,6 +172,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Images\Services\Taybok\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>

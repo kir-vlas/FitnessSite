@@ -25,6 +25,11 @@ namespace FitnessCentreSite
               defaults: new { controller = "Services", action = "Index", name = UrlParameter.Optional }
             );
 
+            routes.MapRoute(
+             name: "Shedule",
+             url: "{controller}/{action}/{name}",
+             defaults: new { controller = "Shedule", action = "Index", name = UrlParameter.Optional }
+           );
         }
     }
 }

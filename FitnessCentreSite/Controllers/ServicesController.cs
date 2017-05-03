@@ -11,7 +11,27 @@ namespace FitnessCentreSite.Controllers
         // GET: Services
         public ActionResult Index()
         {
-            return View("Services");
+            return View("Gym");
+        }
+
+        public ActionResult Body()
+        {
+            return View("Body");
+        }
+
+        public ActionResult Cardio()
+        {
+            return View("Cardio");
+        }
+
+        public ActionResult Karate()
+        {
+            return View("Karate");
+        }
+
+        public ActionResult Taybok()
+        {
+            return View("Taybok");
         }
     }
 }

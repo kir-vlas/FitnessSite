@@ -352,7 +352,7 @@ color: #000;
 border:  1px solid #E6E6FA;
 box-shadow:  0 0 1em red;
 border-radius: 6px;
-background:  #E6E6FA;   
+  
 }
 
 /*описание услуг*/
@@ -367,7 +367,7 @@ margin-right: 270px;
 border:  1px solid #E6E6FA;
 box-shadow:  0 0 1em red;
 border-radius: 30px;
-background:  #E6E6FA;  
+
 }
 
 /*фото услуг*/

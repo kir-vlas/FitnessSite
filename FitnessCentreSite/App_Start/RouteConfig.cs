@@ -20,9 +20,9 @@ namespace FitnessCentreSite
             );
 
             routes.MapRoute(
-              name: "Serv",
-              url: "{controller}/{action}/{id}",
-              defaults: new { controller = "Services", action = "Index", id = UrlParameter.Optional }
+              name: "Services",
+              url: "{controller}/{action}/{name}",
+              defaults: new { controller = "Services", action = "Index", name = UrlParameter.Optional }
             );
 
         }

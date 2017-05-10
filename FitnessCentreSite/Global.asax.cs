@@ -13,6 +13,8 @@ namespace FitnessCentreSite
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            
+
         }
     }
 }

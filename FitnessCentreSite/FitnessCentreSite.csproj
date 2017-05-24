@@ -197,9 +197,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AppUser.cs" />
+    <Compile Include="Models\CardOrder.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CustomPasswordHasher.cs" />
     <Compile Include="Models\CustomUserManager.cs" />
     <Compile Include="Models\CustomUserStore.cs" />
+    <Compile Include="Models\Good.cs" />
+    <Compile Include="Models\SheduleEl.cs" />
+    <Compile Include="Models\Traner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

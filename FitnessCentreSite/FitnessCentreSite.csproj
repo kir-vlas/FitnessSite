@@ -203,6 +203,7 @@
     <Compile Include="Models\CustomUserManager.cs" />
     <Compile Include="Models\CustomUserStore.cs" />
     <Compile Include="Models\Good.cs" />
+    <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\SheduleEl.cs" />
     <Compile Include="Models\Traner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -226,6 +227,7 @@
     <Content Include="Views\Services\Cardio.cshtml" />
     <Content Include="Views\Services\Gym.cshtml" />
     <Content Include="Views\Shedule\Shedule.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -236,7 +238,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\Images\Services\Taybok\" />
-    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

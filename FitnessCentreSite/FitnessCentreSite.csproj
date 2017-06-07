@@ -135,6 +135,10 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\advert\2.png" />
+    <Content Include="Content\Images\advert\3.png" />
+    <Content Include="Content\Images\advert\5.png" />
+    <Content Include="Content\Images\advert\a.png" />
     <Content Include="Content\Images\bx_loader.gif" />
     <Content Include="Content\Images\controls.png" />
     <Content Include="Content\Images\dno.jpg" />
@@ -149,14 +153,14 @@
     <Content Include="Content\Images\inst\4.jpg" />
     <Content Include="Content\Images\inst\5.jpg" />
     <Content Include="Content\Images\logo.png" />
-    <Content Include="Content\Images\mot\1.jpg" />
-    <Content Include="Content\Images\mot\2.jpg" />
-    <Content Include="Content\Images\mot\3.jpg" />
     <Content Include="Content\Images\banners\1.png" />
     <Content Include="Content\Images\banners\2.png" />
     <Content Include="Content\Images\banners\3.png" />
     <Content Include="Content\Images\banners\4.png" />
     <Content Include="Content\Images\banners\5.png" />
+    <Content Include="Content\Images\mot\1.png" />
+    <Content Include="Content\Images\mot\2.png" />
+    <Content Include="Content\Images\mot\3.png" />
     <Content Include="Content\Images\Services\Body\1.jpg" />
     <Content Include="Content\Images\Services\Body\2.jpg" />
     <Content Include="Content\Images\Services\Body\3.jpg" />
@@ -172,8 +176,9 @@
     <Content Include="Content\Images\Services\Trenzal\3.png" />
     <Content Include="Content\Images\slider\bx_loader.gif" />
     <Content Include="Content\Images\slider\controls.png" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Content\Style.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\style.magazin.css" />
+    <Content Include="Content\style.personal.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />

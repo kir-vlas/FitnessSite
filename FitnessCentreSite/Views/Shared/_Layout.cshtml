@@ -1,40 +1,125 @@
-﻿<!DOCTYPE html>
+﻿@model FitnessCentreSite.Models.AbonOrder
+
+<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="https://vk.com/js/api/openapi.js?145" type="text/javascript"></script>
+    <title>Главная</title>
+    <link rel="shortcut icon" href="@Url.Content("~/Content/Images/favicon.ico")" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/style.css")">
+    <meta charset="UTF-8">
+    <!-- jQuery library (served from Google) -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+
+
+    <!-- bxSlider Javascript file -->
+    <script src="@Url.Content("~/Scripts/jquery.bxslider.min.js")"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.bxslider').bxSlider({
+            auto: true
+            });
+        });
+    </script>
+    <!-- bxSlider CSS file -->
+    <link href="@Url.Content("~/Content/jquery.bxslider.css")" rel="stylesheet" />
+
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
+
+    <div id="header2">
+        <div id="header1">
+            <img src="@Url.Content("~/Content/Images/logo3.png")" alt="logo" width="176" height="89" margin-top:10px>
+        </div>
+        <div id="top-bar">
+            <nav class="navigate">
+                <ul>
+                    <li><a href="index.html"><b>Главная</b></a></li>
+                    <li><a href="uslugi.html"><b>Услуги</b></a></li>
+                    <li><a href="rasp/rasp.html"><b>Расписание</b></a></li>
+                    <li><a href="personal.html"><b>Персонал</b></a></li>
+                    <li><a href="magazin.html"><b>Магазин</b></a></li>
+                    <li><a href="faq.html"><b>FAQ</b></a></li>
                 </ul>
+            </nav>
+            <div class="in">
+                <center>@Html.ActionLink("Войти","Login","Account")<a href=""></a></center>
+            </div>
+            <div class="adres">
+                <center><h4 style="padding-top: 20px; margin-top:0px;">г.Саратов</h4></center>
+                <center><h6 style="margin-top: -20px;">ул.Арнольда&nbsp;№&nbsp;007</h6></center>
+                <center><h6 style="margin-top: -25px;">тел:88005553535</h6></center>
             </div>
         </div>
     </div>
 
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+    <div id="header">
     </div>
 
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+
+
+    <div id="abonem">
+        <a class="myButton" onclick="show('block')"></a>
+    </div>
+
+    <div class="render-body">
+        @RenderBody();
+    </div>
+
+    <center>
+        <div class="down">
+            <!-- VK Widget -->
+            <div id="vk_groups">
+                <script type="text/javascript">
+                    VK.Widgets.Group("vk_groups", {mode: 3, width: "960", color1: '101010', color3: '009B21'}, 146111984);
+                </script>
+            </div>
+        </div>
+    </center>
+    <!-- VK Widget -->
+    <div id="vk_community_messages"></div>
+        <script type="text/javascript">
+        VK.Widgets.CommunityMessages("vk_community_messages", 146111984, {expandTimeout: "1000005000",tooltipButtonText: "Есть вопрос?"});
+        </script>
+        <script type="text/javascript">
+                //Функция показа
+            function show(state){
+                document.getElementById('window').style.display = state;
+            }
+        </script>
+
+    <!-- Задний прозрачный фон-->
+    <div onclick="show('none')" id="wrap"></div>
+
+    <!-- Само окно-->
+    <div id="window">
+
+        <!-- Картинка крестика-->
+        <img class="close" onclick="show('none')" src="close.png">
+            @using (Html.BeginForm("Send", "Home", FormMethod.Post))
+            {
+                 @Html.AntiForgeryToken()
+        <div class="blokabon">
+            <center><h2>Получить абонемент</h2></center>
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <h5>
+                        Имя&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5>
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })<span></span>
+                        <h5>Телефон&nbsp;&nbsp;</h5>
+                        @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })<span></span>
+            <br>
+            <center> <input type="submit" value="Send" class="btn btn-default" /> </center>
+        </div>
+            }
+    </div>
+            
+
+
+
+
+
 </body>
 </html>

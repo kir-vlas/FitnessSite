@@ -229,6 +229,8 @@
     <Content Include="Content\Images\background\fon4.jpg" />
     <Content Include="Content\Images\background\fon5.jpg" />
     <Content Include="Content\Images\bx_loader.gif" />
+    <Content Include="Content\Images\cart.png" />
+    <Content Include="Content\Images\cart2.png" />
     <Content Include="Content\Images\controls.png" />
     <Content Include="Content\Images\dno.jpg" />
     <Content Include="Content\Images\favicon.ico" />
@@ -257,6 +259,17 @@
     <Content Include="Content\Images\reklama\5.png" />
     <Content Include="Content\Images\slider\bx_loader.gif" />
     <Content Include="Content\Images\slider\controls.png" />
+    <Content Include="Content\Images\uslug\12.png" />
+    <Content Include="Content\Images\uslug\bas.png" />
+    <Content Include="Content\Images\uslug\BOJ.png" />
+    <Content Include="Content\Images\uslug\GRUP.png" />
+    <Content Include="Content\Images\uslug\IGR.png" />
+    <Content Include="Content\Images\uslug\med.png" />
+    <Content Include="Content\Images\uslug\MULT.png" />
+    <Content Include="Content\Images\uslug\PERS.png" />
+    <Content Include="Content\Images\uslug\SAUN.png" />
+    <Content Include="Content\Images\uslug\TEN.png" />
+    <Content Include="Content\Images\uslug\TREN.png" />
     <Content Include="Content\LoginForm\style.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\style.magazin.css" />
@@ -280,7 +293,12 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\FaqController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ServicesController.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
+    <Compile Include="Controllers\TranersController.cs" />
     <Compile Include="Dal\AbonOrdersDal.cs" />
     <Compile Include="Dal\IAbonOrdersDal.cs" />
     <Compile Include="Global.asax.cs">
@@ -296,6 +314,8 @@
     <Compile Include="Models\IdentityStore.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\RegisterViewModel.cs" />
+    <Compile Include="Models\Role.cs" />
     <Compile Include="Models\SheduleElem.cs" />
     <Compile Include="Models\Traner.cs" />
     <Compile Include="Models\User.cs" />
@@ -324,6 +344,9 @@
     <Content Include="Views\Admin\Admin.cshtml" />
     <Content Include="Views\View.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Faq\Faq.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

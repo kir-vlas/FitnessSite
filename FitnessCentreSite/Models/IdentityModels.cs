@@ -8,6 +8,7 @@ using Microsoft.AspNet.Identity;
 using NHibernate.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
+using Microsoft.Owin;
 
 namespace FitnessCentreSite.Models
 {
@@ -27,6 +28,14 @@ namespace FitnessCentreSite.Models
             UserValidator = new UserValidator<User, int>(this);
             PasswordValidator = new PasswordValidator() { RequiredLength = 6 };
         }
+    }
+
+    public class ApplicationRoleManager : RoleManager<Role,int>
+    {
+        public ApplicationRoleManager(IRoleStore<Role,int> store)
+            : base(store)
+        { }
+       
     }
 
     public class SignInManager : SignInManager<User, int>

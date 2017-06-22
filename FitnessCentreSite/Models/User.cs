@@ -21,5 +21,21 @@ namespace FitnessCentreSite.Models
         [Property]
         public virtual string PasswordHash { get; set; }
 
+        [Bag(0, Table = "UsersInRoles", Cascade = "save-update")]
+        [Key(1, Column = "UsersId")]
+        [ManyToMany(2, ClassType = typeof(Role), Column = "RolesId")]
+        public virtual IList<Role> Roles { get; set; }
+
+        public virtual void AddRole(Role role)
+        {
+            role.UsersInRole.Add(this);
+            Roles.Add(role);
+        }
+
+        public virtual void DeleteRole(Role role)
+        {
+            role.UsersInRole.Remove(this);
+            Roles.Remove(role);
+        }
     }
 }

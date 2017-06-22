@@ -1,8 +1,12 @@
-﻿
+﻿@model FitnessCentreSite.Models.AbonOrder
 @{
     ViewBag.Title = "Главная";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<div id="abonem">
+    <a class="myButton" onclick="show('block')"></a>
+</div>
 
 <center>
     <div class="container">
@@ -33,3 +37,27 @@
     </div>
 </div>
 
+   <!-- Само окно-->
+<div id="window">
+
+    <!-- Картинка крестика-->
+    <img class="close" onclick="show('none')" src="close.png">
+    @using (Html.BeginForm("Send", "Home", FormMethod.Post))
+            {
+        @Html.AntiForgeryToken()
+        <div class="blokabon">
+            <center><h2>Получить абонемент</h2></center>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <h5>
+                Имя&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </h5>
+            @Html.EditorFor(model => Model.Name, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => Model.Name, "", new { @class = "text-danger" })<span></span>
+            <h5>Телефон&nbsp;&nbsp;</h5>
+            @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })<span></span>
+            <br>
+            <center> <input type="submit" value="Send" class="btn btn-default" /> </center>
+        </div>
+    }
+</div>

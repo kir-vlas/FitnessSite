@@ -11,10 +11,12 @@
 <body>
 <div id="main">
     <h2>Admin Panel</h2>
+        @Html.ActionLink("Тренеры","Traners","Admin")
     <h4>Cart Orders</h4>
     @foreach (var item in Model)
     {
-        <div>@Html.DisplayFor(model => item.Name)&nbsp;&nbsp;&nbsp;@Html.DisplayFor(model => item.Phone)</div>
+        <div>@Html.DisplayFor(model => item.Name)&nbsp;&nbsp;&nbsp;@Html.DisplayFor(model => item.Phone)
+            &nbsp;&nbsp;&nbsp;<a href="/Admin/DeleteAbOrder?id=@item.Id">Удалить</a></div>
     }
 </div>
 </body>

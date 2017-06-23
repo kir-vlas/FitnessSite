@@ -1,75 +1,157 @@
-﻿
-@{
-    ViewBag.Title = "Traners";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@{
+    ViewBag.Title = "Персонал";
+    Layout = null;
 }
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://vk.com/js/api/openapi.js?145" type="text/javascript"></script>
+    <title>Главная</title>
+    <link rel="shortcut icon" href="@Url.Content("~/Content/Images/favicon.ico")" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/style.css")">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/style.personal.css")">
+    <meta charset="UTF-8">
+    <!-- jQuery library (served from Google) -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
-<div class="con">
+
+
+    <!-- bxSlider Javascript file -->
+    <script src="@Url.Content("~/Scripts/jquery.bxslider.min.js")"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.bxslider').bxSlider({
+            auto: true
+            });
+        });
+    </script>
+    <!-- bxSlider CSS file -->
+    <link href="@Url.Content("~/Content/jquery.bxslider.css")" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div id="header2">
+        <div id="header1">
+            <img src="@Url.Content("~/Content/Images/logo3.png")" alt="logo" width="176" height="89" margin-top:10px>
+        </div>
+        <div id="top-bar">
+            <nav class="navigate">
+                <ul>
+                    <li>@Html.ActionLink("Главная", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Услуги", "Services", "Services")</li>
+                    <li>@Html.ActionLink("Персонал", "Traners", "Traners")</li>
+                    <li>@Html.ActionLink("Магазин", "Store", "Store")</li>
+                    <li>@Html.ActionLink("FAQ", "Fraq", "Faq")</li>
+                </ul>
+            </nav>
+            <div class="in">
+                @Html.Partial("_LoginPartial")
+            </div>
+            <div class="adres">
+                <center><h4 style="padding-top: 20px; margin-top:0px;">г.Саратов</h4></center>
+                <center><h6 style="margin-top: -20px;">ул.Арнольда&nbsp;№&nbsp;007</h6></center>
+                <center><h6 style="margin-top: -25px;">тел:88005553535</h6></center>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main" style="margin-top:300px;">
+    <div class="con">
+        <center>
+            <div class="nazv">
+                <h1 style="margin-top: -50px;">Персонал</h1>
+            </div>
+        </center>
+
+        <h2 id="otstup">  Персональные тренеры </h2>
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/Phil-Heath.jpg")"> <b class="imya">Фил Хит </b></p> <p class="text">Главный тренер, профессиональный бодибилдер. Пятикратный обладатель титула «Мистер Олимпия» </p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/kai-greene.jpg")"> <b class="imya">Кай Грин </b></p> <p class="text"> Профессиональный культурист </p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/katler.jpg")"> <b class="imya">Джей Катлер </b></p> <p class="text"> Бодибилдер и актёр, четырёхкратный обладатель титула «Мистер Олимпия» </p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/wolf.jpg")"> <b class="imya">Деннис Вольф </b></p> <p class="text"> Профессиональный культурист </p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/branch.jpg")"> <b class="imya">Брэнч Уоррен </b></p> <p class="text">Профессиональный культурист IFBB, победитель и призер многих международных соревнований </p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/roden.jpg")"> <b class="imya">Шон Роден </b></p> <p class="text"> Профессиональный культурист </p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/dekster.jpg")"> <b class="imya">Декстер Джексон </b></p> <p class="text"> Бодибилдер, победитель конкурса «Мистер Олимпия» в 2008 году.  </p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/viktor.jpg")"> <b class="imya">Виктор Мартинес  </b></p> <p class="text"> Профессиональный бодибилдер, победитель конкурса Арнольд Классик 2007 и 2011 года </p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/ramy.jpg")"> <b class="imya">Мамду Элссбиай </b></p> <p class="text"> Профессиональный бодибилдер. Двукратный победитель конкурса New York Pro Championship </p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/boroda.jpg")"> <b class="imya">СиТи Флетчер «Плюшевая борода» </b></p> <p class="text"> Бывший профессиональный пауэрлифтер </p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/skala.jpg")"> <b class="imya">Дуэйн Джонсон </b></p> <p class="text">  Киноактер и рестелр. Является восьмикратным чемпионом WWF/E (World Wrestling Federation/Entertainment) </p> </div>
+
+
+
+
+
+        <h2 id="dvenadcat"> Преподаватели боевых искусств </h2>
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/konor.jpg")"> <b class="imya">Конор Макгрегор </b></p> <p class="text">Главный преподаватель, боец смешанных боевых искусств. Действующий чемпион UFC в полулёгком весе. </p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/fedya.jpg")"> <b class="imya">Фёдор Емельяненко </b></p> <p class="text"> Многократный чемпион мира по ММА в тяжёлом весе, четырёхкратный чемпион мира  по боевому самбо.  </p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/jon.jpg")"> <b class="imya">Джон Джонс </b></p> <p class="text"> Боец смешанных боевых искусств. Бывший чемпион UFC в полутяжёлом весе </p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/habib.jpg")"> <b class="imya">Хабиб Нурмагомедов </b></p> <p class="text">Профессиональный боец смешанного стиля, выступающий в UFC в лёгкой весовой категории </p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/statham.jpg")"> <b class="imya">Джейсон Стэтхэм </b></p> <p class="text"> Актер. Является специалистом в области боевых искусств, занимается бразильским джиу-джитсу </p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/johnson.jpg")"> <b class="imya">Деметриус  Джонсон </b></p> <p class="text">Участник боёв по смешанным правилам (ММА).  Является действующим чемпионом UFC в наилегчайшем весе. </p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/rory.jpg")"> <b class="imya">Рори Макдональд </b></p> <p class="text">Боец, выступающий в UFC в полусредней весовой категории. Бывший чемпион организации King of the Cage в лёгком весе.</p> </div>
+
+
+        <h2 id="sem"> Инструкторы групповых занятий </h2>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/froning_4.jpg")"> <b class="imya">Рич Фронинг </b></p> <p class="text"> Главный инструктор, профессиональный кроссфит-спортсмен, победитель в Играх КроссФит</p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/mariana.jpg")"> <b class="imya">Марьяна  Наумова </b></p> <p class="text"> Cпортсменка в пауэрлифтинге — жим штанги лёжа. Мастер спорта России международного класса. </p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/Sangra.jpg")"> <b class="imya">Анелла Сангра </b></p> <p class="text"> Известная фитнес-модель </p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/tate.jpg")"> <b class="imya">Миша Тейт </b></p> <p class="text"> Боец смешанных боевых искусств. Действующая чемпионка UFC  в женском легчайшем весе </p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/dam.jpg")"> <b class="imya">Жан-Клод Ван Дамм </b></p> <p class="text"> Актёр, режиссёр, сценарист, постановщик боевых сцен; культурист, мастер боевых искусств </p> </div>
+
+        <div class="trener"> <p><img class="photo" src="@Url.Content("~/Content/Images/Koren/Maria.jpg")"> <b class="imya">Мария Шарапова </b></p> <p class="text">Теннисистка, экс-первая ракетка мира. Заслуженный мастер спорта России. </p> </div>
+
+
+
+
+
+    </div>
+        </div>
     <center>
-        <div class="nazv">
-            <h1 style="margin-top: -50px;">Персонал</h1>
+        <div class="down">
+            <!-- VK Widget -->
+            <div id="vk_groups">
+                <script type="text/javascript">
+                    VK.Widgets.Group("vk_groups", {mode: 3, width: "960", color1: '101010', color3: '009B21'}, 146111984);
+                </script>
+            </div>
         </div>
     </center>
+    <!-- VK Widget -->
+    <div id="vk_community_messages"></div>
+    <script type="text/javascript">
+        VK.Widgets.CommunityMessages("vk_community_messages", 146111984, {expandTimeout: "1000005000",tooltipButtonText: "Есть вопрос?"});
+    </script>
+    <script type="text/javascript">
+                //Функция показа
+            function show(state){
+                document.getElementById('window').style.display = state;
+            }
+    </script>
 
-    <h2 id="otstup">  Персональные тренеры </h2>
-    <div class="trener"> <p><img class="photo" src="Koren/Phil-Heath.jpg"> <b class="imya">Фил Хит </b></p> <p class="text">Главный тренер, профессиональный бодибилдер. Пятикратный обладатель титула «Мистер Олимпия» </p> </div>
+    <!-- Задний прозрачный фон-->
+    <div onclick="show('none')" id="wrap"></div>
 
-    <div class="trener"> <p><img class="photo" src="Koren/kai-greene.jpg"> <b class="imya">Кай Грин </b></p> <p class="text"> Профессиональный культурист </p> </div>
-
-    <div class="trener"> <p><img class="photo" src="Koren/katler.jpg"> <b class="imya">Джей Катлер </b></p> <p class="text"> Бодибилдер и актёр, четырёхкратный обладатель титула «Мистер Олимпия» </p> </div>
-
-    <div class="trener"> <p><img class="photo" src="Koren/wolf.jpg"> <b class="imya">Деннис Вольф </b></p> <p class="text"> Профессиональный культурист </p> </div>
-
-    <div class="trener"> <p><img class="photo" src="Koren/branch.jpg"> <b class="imya">Брэнч Уоррен </b></p> <p class="text">Профессиональный культурист IFBB, победитель и призер многих международных соревнований </p> </div>
-
-    <div class="trener"> <p><img class="photo" src="Koren/roden.jpg"> <b class="imya">Шон Роден </b></p> <p class="text"> Профессиональный культурист </p> </div>
-
-    <div class="trener"> <p><img class="photo" src="Koren/dekster.jpg"> <b class="imya">Декстер Джексон </b></p> <p class="text"> Бодибилдер, победитель конкурса «Мистер Олимпия» в 2008 году.  </p> </div>
-
-    <div class="trener"> <p><img class="photo" src="Koren/viktor.jpg"> <b class="imya">Виктор Мартинес  </b></p> <p class="text"> Профессиональный бодибилдер, победитель конкурса Арнольд Классик 2007 и 2011 года </p> </div>
-
-    <div class="trener"> <p><img class="photo" src="Koren/ramy.jpg"> <b class="imya">Мамду Элссбиай </b></p> <p class="text"> Профессиональный бодибилдер. Двукратный победитель конкурса New York Pro Championship </p> </div>
-
-    <div class="trener"> <p><img class="photo" src="Koren/boroda.jpg"> <b class="imya">СиТи Флетчер «Плюшевая борода» </b></p> <p class="text"> Бывший профессиональный пауэрлифтер </p> </div>
-
-    <div class="trener"> <p><img class="photo" src="Koren/skala.jpg"> <b class="imya">Дуэйн Джонсон </b></p> <p class="text">  Киноактер и рестелр. Является восьмикратным чемпионом WWF/E (World Wrestling Federation/Entertainment) </p> </div>
-
-
-
-
-
-    <h2 id="dvenadcat"> Преподаватели боевых искусств </h2>
-    <div class="trener"> <p><img class="photo" src="Koren/konor.jpg"> <b class="imya">Конор Макгрегор </b></p> <p class="text">Главный преподаватель, боец смешанных боевых искусств. Действующий чемпион UFC в полулёгком весе. </p> </div>
-
-    <div class="trener"> <p><img class="photo" src="Koren/fedya.jpg"> <b class="imya">Фёдор Емельяненко </b></p> <p class="text"> Многократный чемпион мира по ММА в тяжёлом весе, четырёхкратный чемпион мира  по боевому самбо.  </p> </div>
-
-    <div class="trener"> <p><img class="photo" src="Koren/jon.jpg"> <b class="imya">Джон Джонс </b></p> <p class="text"> Боец смешанных боевых искусств. Бывший чемпион UFC в полутяжёлом весе </p> </div>
-
-    <div class="trener"> <p><img class="photo" src="Koren/habib.jpg"> <b class="imya">Хабиб Нурмагомедов </b></p> <p class="text">Профессиональный боец смешанного стиля, выступающий в UFC в лёгкой весовой категории </p> </div>
-
-    <div class="trener"> <p><img class="photo" src="Koren/statham.jpg"> <b class="imya">Джейсон Стэтхэм </b></p> <p class="text"> Актер. Является специалистом в области боевых искусств, занимается бразильским джиу-джитсу </p> </div>
-
-    <div class="trener"> <p><img class="photo" src="Koren/johnson.jpg"> <b class="imya">Деметриус  Джонсон </b></p> <p class="text">Участник боёв по смешанным правилам (ММА).  Является действующим чемпионом UFC в наилегчайшем весе. </p> </div>
-
-    <div class="trener"> <p><img class="photo" src="Koren/rory.jpg"> <b class="imya">Рори Макдональд </b></p> <p class="text">Боец, выступающий в UFC в полусредней весовой категории. Бывший чемпион организации King of the Cage в лёгком весе.</p> </div>
-
-
-    <h2 id="sem"> Инструкторы групповых занятий </h2>
-
-    <div class="trener"> <p><img class="photo" src="Koren/froning_4.jpg"> <b class="imya">Рич Фронинг </b></p> <p class="text"> Главный инструктор, профессиональный кроссфит-спортсмен, победитель в Играх КроссФит</p> </div>
-
-    <div class="trener"> <p><img class="photo" src="Koren/mariana.jpg"> <b class="imya">Марьяна  Наумова </b></p> <p class="text"> Cпортсменка в пауэрлифтинге — жим штанги лёжа. Мастер спорта России международного класса. </p> </div>
-
-    <div class="trener"> <p><img class="photo" src="Koren/Sangra.jpg"> <b class="imya">Анелла Сангра </b></p> <p class="text"> Известная фитнес-модель </p> </div>
-
-    <div class="trener"> <p><img class="photo" src="Koren/tate.jpg"> <b class="imya">Миша Тейт </b></p> <p class="text"> Боец смешанных боевых искусств. Действующая чемпионка UFC  в женском легчайшем весе </p> </div>
-
-    <div class="trener"> <p><img class="photo" src="Koren/dam.jpg"> <b class="imya">Жан-Клод Ван Дамм </b></p> <p class="text"> Актёр, режиссёр, сценарист, постановщик боевых сцен; культурист, мастер боевых искусств </p> </div>
-
-    <div class="trener"> <p><img class="photo" src="Koren/Maria.jpg"> <b class="imya">Мария Шарапова </b></p> <p class="text">Теннисистка, экс-первая ракетка мира. Заслуженный мастер спорта России. </p> </div>
-
-
-
-
-
-</div>
+</body>
+</html>

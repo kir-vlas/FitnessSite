@@ -14,7 +14,7 @@ namespace FitnessCentreSite.Controllers
             return View();
         }
 
-        public ActionResult ServicesUnit()
+        public ActionResult ServiceUnit()
         {
             return View();
         }

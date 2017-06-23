@@ -9,7 +9,7 @@ namespace FitnessCentreSite.Controllers
     public class TranersController : Controller
     {
         // GET: Traners
-        public ActionResult Index()
+        public ActionResult Traners()
         {
             return View();
         }

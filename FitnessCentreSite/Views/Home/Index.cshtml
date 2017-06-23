@@ -41,7 +41,7 @@
 <div id="window">
 
     <!-- Картинка крестика-->
-    <img class="close" onclick="show('none')" src="close.png">
+    <img class="close" onclick="show('none')" src="@Url.Content("~/Content/Images/close.png")">
     @using (Html.BeginForm("Send", "Home", FormMethod.Post))
             {
         @Html.AntiForgeryToken()

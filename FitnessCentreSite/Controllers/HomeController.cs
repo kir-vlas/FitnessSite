@@ -10,10 +10,10 @@ namespace FitnessCentreSite.Controllers
 {
     public class HomeController : Controller
     {
-        IAbonOrderService ordersServ;
+        private readonly IAbonOrderService _ordersServ;
         public HomeController(IAbonOrderService ord)
         {
-            ordersServ = ord;
+            _ordersServ = ord;
         }
         // GET: Home
         public ActionResult Index()
@@ -24,7 +24,7 @@ namespace FitnessCentreSite.Controllers
         [HttpPost]
         public ActionResult Send(AbonOrder abonOrder)
         {
-            ordersServ.Save(abonOrder);
+            _ordersServ.Save(abonOrder);
             return View("Index");
         }
     }

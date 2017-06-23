@@ -10,6 +10,7 @@ namespace FitnessCentreSite.Models
     {
         [Required]
         [Display(Name = "User name")]
+        [DataType(DataType.EmailAddress)]
         public string UserName { get; set; }
 
         [Required]
@@ -17,6 +18,12 @@ namespace FitnessCentreSite.Models
         [Display(Name = "Password")]
         public string Password { get; set; }
 
-        
+        [Required]
+        [Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [Required]
+        [Display(Name = "Last Name")]
+        public string LastName { get; set; }
     }
 }

@@ -15,11 +15,28 @@ namespace FitnessCentreSite.Models
         [Generator(1, Class = "native")]
         public virtual int Id { get; protected set; }
 
+        public User()
+        {
+            Roles = new List<Role>();
+        }
+
         [Property]
         public virtual string UserName { get; set; }
 
         [Property]
         public virtual string PasswordHash { get; set; }
+
+        [Property]
+        public virtual string FirstName { get; set; }
+
+        [Property]
+        public virtual string LastName { get; set; }
+
+        [Property]
+        public virtual byte[] Photo { get; set; }
+
+        [Property]
+        public virtual string About { get; set; }
 
         [Bag(0, Table = "UsersInRoles", Cascade = "save-update")]
         [Key(1, Column = "UsersId")]

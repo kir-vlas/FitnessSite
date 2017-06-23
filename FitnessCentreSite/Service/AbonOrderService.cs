@@ -20,5 +20,25 @@ namespace FitnessCentreSite.Service
         {
             Database.Save(abonOrder);
         }
+
+        public IList<AbonOrder> ListAll()
+        {
+            return Database.ListAll();
+        }
+
+        public AbonOrder GetOne(int id)
+        {
+            return Database.GetOne(id);
+        }
+
+        public void Delete(AbonOrder abonOrder)
+        {
+            Database.Delete(abonOrder);
+        }
+
+        public void Update(AbonOrder abonOrder)
+        {
+            Database.Update(abonOrder);
+        }
     }
 }

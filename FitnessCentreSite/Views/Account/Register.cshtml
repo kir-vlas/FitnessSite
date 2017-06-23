@@ -33,27 +33,27 @@
                             <label>
                                 Имя<span class="req">*</span>
                             </label>
-                            <input type="text" required autocomplete="off" />
+                            @Html.EditorFor(model => Model.FirstName)
                         </div>
 
                         <div class="field-wrap">
                             <label>
                                 Фамилия<span class="req">*</span>
                             </label>
-                            <input type="text" required autocomplete="off" />
+                            @Html.EditorFor(model => Model.LastName)
                         </div>
                     </div>
 
                     <div class="field-wrap">
                         <label>
-                            Email Адрес<span class="req">*</span>
+                            Email<span class="req">*</span>
                         </label>
                         @Html.EditorFor(model => Model.UserName)
                     </div>
 
                     <div class="field-wrap">
                         <label>
-                            Введите пароль<span class="req">*</span>
+                            Введите<span class="req">*</span>
                         </label>
                         @Html.EditorFor(model => Model.Password)
                     </div>

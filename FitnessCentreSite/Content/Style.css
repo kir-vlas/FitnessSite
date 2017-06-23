@@ -64,7 +64,7 @@ html { overflow-y: scroll; }
     height:1100px;
     margin:0 auto;
     padding:10px;
-    border: px solid #282828;
+    border: 1px solid #282828;
     
 }
 .fit2{
@@ -211,7 +211,7 @@ z-index:103;
 
 .navigate ul 
 {
-  list-style-tipe:none;
+  list-style-type:none;
   padding:0;
   margin:0 auto;
   width: 800px; 
@@ -270,7 +270,7 @@ opacity:1;
 
 .container{
 width: 960px;
-hight: 500px;
+height: 500px;
 margin-top: 10px;
 margin-left: 0px;
 }
@@ -420,7 +420,6 @@ background:  #fff;
 .vidraspisan {
 width: 550px;
 height: 35px;
-padding: 0 auto;
 margin:0 auto;
 margin-top: 10px;
 font-family:Coronetscript, cursive ;
@@ -600,7 +599,7 @@ fieldset {
   border:1px solid lightgrey;
 }
 
-}
+
 input {
   position:absolute;
   left:137px;

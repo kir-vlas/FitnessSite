@@ -197,13 +197,15 @@ namespace FitnessCentreSite.Models
         {
             return Task.Run(() =>
             {
-                Role role = session.CreateCriteria(typeof(Role))
-                    .Add(NHibernate.Criterion.Restrictions.Eq("Name", "Client"))
-                    .Add(NHibernate.Criterion.Restrictions.Eq("ApplicationName", this.ApplicationName))
-                    .UniqueResult<Role>();
-                IList<User> us = role.UsersInRole;
                 IList<string> lst = new List<string>();
-                lst.Add(role.Name);
+                IList<Role> roles = session.CreateCriteria(typeof(Role))
+                    .Add(NHibernate.Criterion.Restrictions.Eq("ApplicationName", this.ApplicationName)).List<Role>();
+                foreach (var role in roles)
+                {
+                    IList<User> us = role.UsersInRole;
+                    lst.Add(role.Name);
+                }           
+                
                 return lst;
             });
         }

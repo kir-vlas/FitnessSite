@@ -35,6 +35,7 @@ namespace FitnessCentreSite.Controllers
                 var result = SignInManager.PasswordSignIn(model.UserName, model.Password, false, false);
                 if (result == SignInStatus.Success)
                 {
+                    UserManager.GetRolesAsync(UserManager.FindByName(model.UserName).Id);
                     return RedirectToAction("Index", "Home");
                 }
                 else
@@ -51,7 +52,7 @@ namespace FitnessCentreSite.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new User() { UserName = model.UserName, Roles = new List<Role>() };
+                var user = new User() { UserName = model.UserName, FirstName = model.FirstName, LastName = model.LastName, Roles = new List<Role>() };
                 user.Roles.Add(new Role() { Name = "Client" });
                 var result = UserManager.Create(user, model.Password);
                 if (result.Succeeded)
@@ -61,7 +62,15 @@ namespace FitnessCentreSite.Controllers
                     return RedirectToAction("Index", "Home");
                 }
             }
-            return View();
+            return RedirectToAction("Index","Home");
+        }
+
+        [Authorize]
+        public ActionResult UserProfile()
+        {
+            string name = User.Identity.GetUserName();
+            FitnessCentreSite.Models.User user = UserManager.FindByName(name);
+            return View(user);
         }
 
         [HttpPost]

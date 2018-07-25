@@ -17,6 +17,10 @@ namespace FitnessCentreSite.Infrastructure
         public override void Load()
         {
             Bind<IAbonOrdersDal>().To<AbonOrdersDal>().WithConstructorArgument(connectionString);
+            Bind<ITranersDal>().To<TranersDal>().WithConstructorArgument(connectionString);
+            Bind<IGoodDal>().To<GoodDal>().WithConstructorArgument(connectionString);
+            Bind<ICategoryDal>().To<CategoryDal>().WithConstructorArgument(connectionString);
+            Bind<IBannerDal>().To<BannerDal>().WithConstructorArgument(connectionString);
         }
     }
 }

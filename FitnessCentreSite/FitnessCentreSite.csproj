@@ -238,6 +238,8 @@
     <Content Include="Content\Images\fon.jpg" />
     <Content Include="Content\Images\fon4.jpg" />
     <Content Include="Content\Images\fot.png" />
+    <Content Include="Content\Images\fotkab\garfild.png" />
+    <Content Include="Content\Images\fotkab\user.png" />
     <Content Include="Content\Images\header.jpg" />
     <Content Include="Content\Images\icon.png" />
     <Content Include="Content\Images\icon1.png" />
@@ -338,6 +340,7 @@
     <Content Include="Content\Images\uslug\TREN.png" />
     <Content Include="Content\LoginForm\style.css" />
     <Content Include="Content\style.css" />
+    <Content Include="Content\style.kab.css" />
     <Content Include="Content\style.magazin.css" />
     <Content Include="Content\style.personal.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -366,13 +369,23 @@
     <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Controllers\TranersController.cs" />
     <Compile Include="Dal\AbonOrdersDal.cs" />
+    <Compile Include="Dal\BannerDal.cs" />
+    <Compile Include="Dal\CategoryDal.cs" />
+    <Compile Include="Dal\GoodDal.cs" />
     <Compile Include="Dal\IAbonOrdersDal.cs" />
+    <Compile Include="Dal\IBannerDal.cs" />
+    <Compile Include="Dal\ICategoryDal.cs" />
+    <Compile Include="Dal\IGoodDal.cs" />
+    <Compile Include="Dal\ITranersDal.cs" />
+    <Compile Include="Dal\TranersDal.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\ServiceModule.cs" />
     <Compile Include="Models\AbonOrder.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Banner.cs" />
+    <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\ClientProfile.cs" />
     <Compile Include="Models\Good.cs" />
@@ -384,12 +397,22 @@
     <Compile Include="Models\Role.cs" />
     <Compile Include="Models\SheduleElem.cs" />
     <Compile Include="Models\Traner.cs" />
+    <Compile Include="Models\TranerViewModel.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserDBContext.cs" />
     <Compile Include="NHibernateHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\AbonOrderService.cs" />
+    <Compile Include="Service\BannerService.cs" />
+    <Compile Include="Service\CategoryService.cs" />
+    <Compile Include="Service\GoodService.cs" />
     <Compile Include="Service\IAbonOrderService.cs" />
+    <Compile Include="Service\IBannerService.cs" />
+    <Compile Include="Service\ICategoryService.cs" />
+    <Compile Include="Service\IGoodService.cs" />
+    <Compile Include="Service\ITranerService.cs" />
+    <Compile Include="Service\TranerService.cs" />
+    <Compile Include="Utils.cs" />
     <Compile Include="Util\NinjectDependencyResolver.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -408,11 +431,14 @@
     <Content Include="Views\Traners\Traners.cshtml" />
     <Content Include="Views\Store\Store.cshtml" />
     <Content Include="Views\Admin\Admin.cshtml" />
-    <Content Include="Views\View.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Faq\Faq.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\View.cshtml" />
+    <Content Include="Views\Account\UserProfile.cshtml" />
+    <Content Include="Views\Admin\CreateTraner.cshtml" />
+    <Content Include="Views\Admin\Traners.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

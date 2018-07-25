@@ -7,7 +7,7 @@ font-family: Georgia;
 font-size: 14pt;
 color: #B3AEA8;
 background: #000000;
-background-image: url(fon/fon4.jpg);
+background-image: url(Images/fon4.jpg);
 background-position:50% 0px;
 background-repeat: no-repeat;
 margin: 0 auto;
@@ -231,7 +231,7 @@ z-index:103;
 
 .navigate ul 
 {
-  list-style-tipe:none;
+  list-style-type:none;
   padding:0;
   margin:0 auto;
   width: 800px; 
@@ -553,7 +553,7 @@ fieldset {
   border:1px solid lightgrey;
 }
 
-}
+
 input {
   position:absolute;
   left:137px;

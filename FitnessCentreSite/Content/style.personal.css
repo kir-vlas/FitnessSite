@@ -166,7 +166,7 @@ z-index:103;
 
 .navigate ul 
 {
-  list-style-tipe:none;
+  list-style-type:none;
   padding:0;
   margin:0 auto;
   width: 800px; 
@@ -284,7 +284,7 @@ fieldset {
   border:1px solid lightgrey;
 }
 
-}
+
 input {
   position:absolute;
   left:37px;

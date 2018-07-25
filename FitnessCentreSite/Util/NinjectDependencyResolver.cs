@@ -27,6 +27,10 @@ namespace FitnessCentreSite.Util
         private void AddBindings()
         {
             kernel.Bind<IAbonOrderService>().To<AbonOrderService>();
+            kernel.Bind<ITranerService>().To<TranerService>();
+            kernel.Bind<ICategoryService>().To<CategoryService>();
+            kernel.Bind<IGoodService>().To<GoodService>();
+            kernel.Bind<IBannerService>().To<BannerService>();
         }
     }
 }

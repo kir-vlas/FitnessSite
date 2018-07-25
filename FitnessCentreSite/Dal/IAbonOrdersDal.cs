@@ -9,6 +9,13 @@ namespace FitnessCentreSite.Dal
     public interface IAbonOrdersDal
     {
         void Save(AbonOrder abonOrder);
-        
+
+        IList<AbonOrder> ListAll();
+
+        AbonOrder GetOne(int id);
+
+        void Delete(AbonOrder abonOrder);
+
+        void Update(AbonOrder abonOrder);
     }
 }

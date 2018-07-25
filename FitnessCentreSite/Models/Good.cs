@@ -6,6 +6,7 @@ using NHibernate.Mapping.Attributes;
 
 namespace FitnessCentreSite.Models
 {
+    [Class]
     public class Good
     {
         public int GoodId { get; set; }

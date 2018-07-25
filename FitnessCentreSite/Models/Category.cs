@@ -15,5 +15,13 @@ namespace FitnessCentreSite.Models
 
         [Property]
         public virtual string CatTitle { get; set; }
+
+        [Bag(0,Name = "Good", Inverse = true)]
+        [Key(1, Column = "Id")]
+        [OneToMany(2,ClassType = typeof(Good))]
+        public virtual IList<Good> Good {
+            get { return Good ?? (Good = new List<Good>()); }
+            set { Good = value; }
+        }
     }
 }

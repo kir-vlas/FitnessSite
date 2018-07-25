@@ -1,17 +1,19 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using NHibernate.Mapping.Attributes;
 
 namespace FitnessCentreSite.Models
 {
+    [Class]
     public class Category
     {
-        
-        public int CategoryId { get; set; }
+        [Id(0, Name = "Id")]
+        [Generator(1, Class = "native")]
+        public virtual int Id { get; set; }
 
-
-        public string CategoryName { get; set; }
+        [Property]
+        public virtual string CatTitle { get; set; }
     }
 }

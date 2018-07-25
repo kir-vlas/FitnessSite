@@ -8,7 +8,7 @@ font-family: Georgia;
 font-size: 14pt;
 color: #B3AEA8;
 background: #000000;
-background-image: url(fon/fon4.jpg);
+background-image: url(/Content/Images/background/fon4.jpg);
 background-position:50% 0px;
 background-repeat: no-repeat;
 margin: 0 auto;
@@ -138,6 +138,7 @@ z-index:103;
 margin-left:-53%;
 }
 /* Значок абонемента */
+
 
 
 
@@ -527,7 +528,7 @@ color: #000000;
 .main-menu a:hover {
     
 color: #67b53f;
-   
+
 }
 
 

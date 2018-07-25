@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 
+
+
 namespace FitnessCentreSite.Models
 {
     public class LoginViewModel
@@ -21,5 +23,12 @@ namespace FitnessCentreSite.Models
             [Display(Name = "Запомнить меня")]
             public bool RememberMe { get; set; }
       
+        [Display(Name = "User name")]
+        [Required]
+        public string UserName { get; set; }
+
+        [DataType(DataType.Password)]
+        [Required]
+        public string Password { get; set; }
     }
 }

@@ -8,6 +8,7 @@ namespace FitnessCentreSite.Controllers
 {
     public class ServicesController : Controller
     {
+
         // GET: Services
         public ActionResult Index()
         {
@@ -32,6 +33,7 @@ namespace FitnessCentreSite.Controllers
         public ActionResult Taybok()
         {
             return View("Taybok");
+
         }
     }
 }

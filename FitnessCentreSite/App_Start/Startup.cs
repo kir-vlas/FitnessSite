@@ -15,6 +15,7 @@ namespace FitnessCentreSite
         public void Configuration(IAppBuilder app)
         {
             app.CreatePerOwinContext(() => new UserManager(new UserDBContext().Users));
+            app.CreatePerOwinContext(() => new ApplicationRoleManager(new UserDBContext().Roles));
             app.CreatePerOwinContext<SignInManager>((options, context) => new SignInManager(context.GetUserManager<UserManager>(), context.Authentication));
 
             app.UseCookieAuthentication(new CookieAuthenticationOptions

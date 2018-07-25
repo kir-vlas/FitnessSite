@@ -1,8 +1,167 @@
-﻿
-@{
-    ViewBag.Title = "Store";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@{
+    ViewBag.Title = "Магазин";
+    Layout = null;
 }
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://vk.com/js/api/openapi.js?145" type="text/javascript"></script>
+    <title>Главная</title>
+    <link rel="shortcut icon" href="@Url.Content("~/Content/Images/favicon.ico")" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/style.css")">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/style.magazin.css")">
+    <meta charset="UTF-8">
+    <!-- jQuery library (served from Google) -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
-<h2>Store</h2>
 
+
+    <!-- bxSlider Javascript file -->
+    <script src="@Url.Content("~/Scripts/jquery.bxslider.min.js")"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.bxslider').bxSlider({
+            auto: true
+            });
+        });
+    </script>
+    <!-- bxSlider CSS file -->
+    <link href="@Url.Content("~/Content/jquery.bxslider.css")" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div id="header2">
+        <div id="header1">
+            <img src="@Url.Content("~/Content/Images/logo3.png")" alt="logo" width="176" height="89" margin-top:10px>
+        </div>
+        <div id="top-bar">
+            <nav class="navigate">
+                <ul>
+                    <li>@Html.ActionLink("Главная", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Услуги", "Services", "Services")</li>
+                    <li>@Html.ActionLink("Персонал", "Traners", "Traners")</li>
+                    <li>@Html.ActionLink("Магазин","Store","Store")</li>
+                    <li>@Html.ActionLink("FAQ", "Fraq", "Faq")</li>
+                </ul>
+            </nav>
+            <div class="in">
+                @Html.Partial("_LoginPartial")
+            </div>
+            <div class="adres">
+                <center><h4 style="padding-top: 20px; margin-top:0px;">г.Саратов</h4></center>
+                <center><h6 style="margin-top: -20px;">ул.Арнольда&nbsp;№&nbsp;007</h6></center>
+                <center><h6 style="margin-top: -25px;">тел:88005553535</h6></center>
+            </div>
+        </div>
+    </div>
+
+    <div class="main" style="margin-top:300px;">
+        <div class="fit">
+            <div class="sidebar">
+                <h2>Каталог товаров:</h2>
+                <nav>
+                    <ul class="aside-menu">
+                        <li class="active">Обувь</li>
+                        <li><a href="magazin.html">Одежда</a></li>
+                        <li><a href="magazin.html">Товары для фитнеса</a></li>
+                        <li><a href="magazin.html">Товары для единоборств</a></li>
+                        <li><a href="magazin.html">Спортивное питание</a></li>
+                        <li><a href="magazin.html">Аксессуары</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="content">
+                <h2>Обувь</h2>
+
+                <div class="tovar">
+                    <img src="@Url.Content("~/Content/Images/Magazin/Obyv/1.jpg")" class="kartinka" width="146" height="146">
+                    <div class="name">ASICS <div class="name1">Кроссовки GT-2000 4</div></div> <div>8 500 руб.</div>
+                </div>
+                <div class="tovar">
+                    <img src="@Url.Content("~/Content/Images/Magazin/Obyv/2.jpg")" class="kartinka" width="146" height="146">
+                    <div class="name"> Nike <div class="name1">Кроссовки NIKE AIR MAX </div></div> <div>5 500 руб.</div>
+                </div>
+
+                <div class="tovar">
+                    <img src="@Url.Content("~/Content/Images/Magazin/Obyv/3.jpg")" class="kartinka" width="146" height="146">
+                    <div class="name">ASICS TIGER <div class="name1">Кроссовки AARON</div></div> <div>4 700 руб.</div>
+                </div>
+                <div class="tovar">
+                    <img src="@Url.Content("~/Content/Images/Magazin/Obyv/4.jpg")" class="kartinka" width="146" height="146">
+                    <div class="name">Patrol <div class="name1">Кроссовки</div></div> <div>3 000 руб.</div>
+                </div>
+                <div class="tovar">
+                    <img src="@Url.Content("~/Content/Images/Magazin/Obyv/5.jpg")" class="kartinka" width="146" height="146">
+                    <div class="name">ONITSUKA TIGER <div class="name1">Кроссовки MEXICO 66</div></div> <div>5 900 руб.</div>
+                </div>
+                <div class="tovar">
+                    <img src="@Url.Content("~/Content/Images/Magazin/Obyv/6.jpg")" class="kartinka" width="146" height="146">
+                    <div class="name">UN1TA <div class="name1">Кроссовки</div></div> <div>4 530 руб.</div>
+                </div>
+
+                <div class="tovar">
+                    <img src="@Url.Content("~/Content/Images/Magazin/Obyv/7.jpg")" class="kartinka" width="146" height="146">
+                    <div class="name">Joma <div class="name1">Бутсы AGUILA</div></div> <div>2 550 руб.</div>
+                </div>
+                <div class="tovar">
+                    <img src="@Url.Content("~/Content/Images/Magazin/Obyv/8.jpg")" class="kartinka" width="146" height="146">
+                    <div class="name">Nike <div class="name1">Кроссовки NIKE AIR MAX </div></div> <div>4 900 руб.</div>
+                </div>
+                <div class="tovar">
+                    <img src="@Url.Content("~/Content/Images/Magazin/Obyv/9.jpg")" class="kartinka" width="146" height="146">
+                    <div class="name">EDITEX <div class="name1">Кеды</div></div> <div>2 700 руб.</div>
+                </div>
+                <div class="tovar">
+                    <img src="@Url.Content("~/Content/Images/Magazin/Obyv/10.jpg")" class="kartinka" width="146" height="146">
+                    <div class="name">Nike <div class="name1">Кроссовки THE AIR </div></div> <div>5 500 руб.</div>
+                </div>
+                <div class="tovar">
+                    <img src="@Url.Content("~/Content/Images/Magazin/Obyv/11.jpg")" class="kartinka" width="146" height="146">
+                    <div class="name">Fred Perry <div class="name1">Кеды </div></div> <div>6 500 руб.</div>
+                </div>
+                <div class="tovar">
+                    <img src="@Url.Content("~/Content/Images/Magazin/Obyv/12.jpg")" class="kartinka" width="146" height="146">
+                    <div class="name">DC Shoes<div class="name1">Кеды </div></div> <div>4 500 руб.</div>
+                </div>
+                <div class="tovar">
+                    <img src="@Url.Content("~/Content/Images/Magazin/Obyv/13.jpg")" class="kartinka" width="146" height="146">
+                    <div class="name">Nike <div class="name1">Галоши </div></div> <div>1 500 руб.</div>
+                </div>
+                <div class="tovar">
+                    <img src="@Url.Content("~/Content/Images/Magazin/Obyv/14.jpg")" class="kartinka" width="146" height="146">
+                    <div class="name">Reebok <div class="name1">Сланцы </div></div> <div>500 руб.</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <center>
+        <div class="down">
+            <!-- VK Widget -->
+            <div id="vk_groups">
+                <script type="text/javascript">
+                    VK.Widgets.Group("vk_groups", {mode: 3, width: "960", color1: '101010', color3: '009B21'}, 146111984);
+                </script>
+            </div>
+        </div>
+    </center>
+    <!-- VK Widget -->
+    <div id="vk_community_messages"></div>
+    <script type="text/javascript">
+        VK.Widgets.CommunityMessages("vk_community_messages", 146111984, {expandTimeout: "1000005000",tooltipButtonText: "Есть вопрос?"});
+    </script>
+    <script type="text/javascript">
+                //Функция показа
+            function show(state){
+                document.getElementById('window').style.display = state;
+            }
+    </script>
+
+    <!-- Задний прозрачный фон-->
+    <div onclick="show('none')" id="wrap"></div>
+
+</body>
+</html>

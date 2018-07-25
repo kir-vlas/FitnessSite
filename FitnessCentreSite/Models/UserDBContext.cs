@@ -17,6 +17,16 @@ namespace FitnessCentreSite.Models
             get { return new IdentityStore(NHibernateHelper.OpenSession()); }
         }
 
+        public IRoleStore<Role, int> Roles
+        {
+            get { return new IdentityStore(NHibernateHelper.OpenSession()); }
+        }
+
+        public IUserRoleStore<User,int> UserRole
+        {
+            get { return new IdentityStore(NHibernateHelper.OpenSession()); }
+        }
+
         public ISession MakeSession()
         {
             return sessionFactory.OpenSession();

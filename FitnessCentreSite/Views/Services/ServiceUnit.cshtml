@@ -1,8 +1,69 @@
 ﻿
 @{
-    ViewBag.Title = "Service";
+    ViewBag.Title = "Услуга";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Service</h2>
+<div id="serv" style="background-color: rgb(255, 255, 255);">
+<center>
+    <div class="nazv">
+        <img src="@Url.Content("~/Content/Images/uslug/12.png")" style="margin-left: -600px;">
+        <h1 style="margin-top: -50px;">Услуги</h1>
+    </div>
+</center>
+<div class="fit">
 
+    <div class="uslugi">
+        <ul class="main-menu">
+            <p style="margin-left: 50px;font-family:Coronetscript, cursive; font-size: 19pt; color: #000000;">Услуги</p>
+            <li>@Html.ActionLink("Услуги","Services","Services")</li>
+            <li>
+                <a style="font-size: 17pt;" href="">Групповые занятия</a>
+                <ul class="sub-menu">
+                    <li><a href="">Body&Mind</a></li>
+                    <li><a>Силовые</a></li>
+                    <li><a href="">Кардио</a></li>
+                </ul>
+            <li><a style="font-size: 17pt;" href="">Боевые искуства</a></li>
+            <ul class="sub-menu">
+                <li><a href="">Каратэ</a></li>
+                <li><a href="">Тайский бокс</a></li>
+                <li><a href="#3">Ушу</a></li>
+                <li><a href="#3">Бокс</a></li>
+            </ul>
+            <li><a style="font-size: 17pt;" href="">Душевые и сауна</a></li>
+            <li><a style="font-size: 17pt;" href="">Бассейн</a></li>
+        </ul>
+    </div>
+    <div class="nazuslug">
+        <center><p style="margin-top:0px;font-family:Coronetscript, cursive ;font-size: 22pt;color:#000000;">Бассейн</p></center>
+    </div>
+    <div class="opisanuslug">
+        <style>
+            p:first-letter {
+                color: #3ac14b;
+                margin-left: 5px;
+                font: normal 25pt Georgia;
+            }
+        </style>
+        <div class="cvet">
+            <p>Плавать рекомендуется с детства и до глубокой старости. В бассейне у ребенка сформируется правильно осанка, удлинятся ноги, окрепнет иммунитет. Сопротивляемость в воде в разы выше, чем на суше. Поэтому при самостоятельном плавании и на аквазанятиях эффект от аэробной работы будет заметнее. Посещать бассейн разрешено и даже рекомендовано всем, у кого есть травмы позвоночника и проблемы с суставами, так как в воде нагрузка на позвоночник отсутствует.
+
+            <p>Во время плавания также увеличивается объем легких, ускоряется процесс насыщения кислородом организма. Вода обладает массирующим и расслабляющим эффектом, что благотворно влияет на нервную систему. Люди, посещающие бассейн, меньше подвержены нервным расстройствам, бессонницам, реже болеют и дольше живут.</p>
+        </div>
+
+        <p>Возможность плавать в любое время года без ограничений по возрасту и состоянию здоровья – вот, что по-настоящему ценно!</p>
+    </div>
+
+    <div class="photouslug"><img src="@Url.Content("~/Content/Images/uslug/bass.png")" /></div>
+
+</div>
+
+<center>
+    <div class="med">
+        <img src="@Url.Content("~/Content/Images/uslug/med.png")" style="margin-left: -5%; margin-top: 50px;">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.1006729580076!2d45.9755743158689!3d51.52971331689231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4114c7000890260d%3A0xb69430fed1b7968c!2z0KHQsNGA0LDRgtC-0LLRgdC60LjQuSDQk9C-0YHRg9C00LDRgNGB0YLQstC10L3QvdGL0Lkg0KLQtdGF0L3QuNGH0LXRgdC60LjQuSDQo9C90LjQstC10YDRgdC40YLQtdGCINC40LzQtdC90Lgg0JPQsNCz0LDRgNC40L3QsCDQri4g0JAu!5e0!3m2!1sru!2sru!4v1494839905773" width="800" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+</center>
+    </div>
+<center><div class="down"></div></center>
